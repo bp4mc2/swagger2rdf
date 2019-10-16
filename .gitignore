@@ -1,0 +1,5 @@
+target
+data/*.json
+data/*.yml
+data/*.yaml
+data/*.ttl
