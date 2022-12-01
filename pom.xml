@@ -5,24 +5,24 @@
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
 	<name>swagger2rdf</name>
-  <properties>
-      <java.version>1.8</java.version>
-  </properties>
+	<properties>
+		<java.version>11</java.version>
+	</properties>
 	<dependencies>
 		<dependency>
-      <groupId>io.swagger.parser.v3</groupId>
-      <artifactId>swagger-parser-v3</artifactId>
-      <version>2.0.5</version>
-    </dependency>
+			<groupId>io.swagger.parser.v3</groupId>
+			<artifactId>swagger-parser-v3</artifactId>
+			<version>2.1.9</version>
+		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-			<version>1.7.25</version>
+			<version>2.0.5</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.jena</groupId>
-		    <artifactId>jena-arq</artifactId>
-		    <version>3.10.0</version>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-arq</artifactId>
+			<version>4.6.1</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -30,33 +30,33 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.10.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 			<plugin>
-			  <artifactId>maven-assembly-plugin</artifactId>
-			  <configuration>
-				<archive>
-				  <manifest>
-					<mainClass>nl.bp4mc2.swagger2rdf.Swagger2RDF</mainClass>
-				  </manifest>
-				</archive>
-				<descriptorRefs>
-				  <descriptorRef>jar-with-dependencies</descriptorRef>
-				</descriptorRefs>
-			  </configuration>
-			  <executions>
-				<execution>
-				  <id>make-assembly</id>
-				  <phase>package</phase>
-				  <goals>
-					<goal>single</goal>
-				  </goals>
-				</execution>
-			  </executions>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>nl.bp4mc2.swagger2rdf.Swagger2RDF</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
